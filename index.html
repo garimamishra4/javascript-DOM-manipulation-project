@@ -72,6 +72,59 @@
     <script>
         // 1. Changing HTML Content
         document.getElementById('content').innerHTML = "<p>Content has been updated!</p>";
+        // 2. Changing Element Attributes
+        document.getElementById('changeImageBtn').addEventListener('click', function() {
+            document.getElementById('myImage').src = "https://via.placeholder.com/200";
+            document.getElementById('myImage').alt = "New Image";
+        });
+
+        // 3. Adding and Removing CSS Classes
+        document.getElementById('addClassBtn').addEventListener('click', function() {
+            document.getElementById('myElement').classList.add('newClass');
+        });
+
+        document.getElementById('removeClassBtn').addEventListener('click', function() {
+            document.getElementById('myElement').classList.remove('newClass');
+        });
+
+        // 4. Adding/Removing Elements
+        document.getElementById('createNewDivBtn').addEventListener('click', function() {
+            let newDiv = document.createElement('div');
+            newDiv.innerHTML = "This is a new div added dynamically!";
+            document.body.appendChild(newDiv);
+        });
+       // 5. Event Handling
+        document.getElementById('alertBtn').addEventListener('click', function() {
+            alert('You clicked the button!');
+        });
+
+        // 6. Traversing the DOM
+        document.getElementById('parentDiv').addEventListener('click', function() {
+            let parent = document.getElementById('parentDiv');
+            let child = parent.querySelector('#childDiv');
+            alert("Parent's content: " + parent.innerHTML + "\nChild's content: " + child.innerHTML);
+        });
+
+        // 7. Form Manipulation
+        document.getElementById('formSubmitBtn').addEventListener('click', function() {
+            let inputValue = document.getElementById('nameInput').value;
+            alert('Form submitted! Name: ' + inputValue);
+        });
+
+        // 8. Table Manipulation
+        document.getElementById('addTableRowBtn').addEventListener('click', function() {
+            let table = document.getElementById('myTable');
+            let newRow = table.insertRow();
+            let newCell = newRow.insertCell(0);
+            newCell.textContent = "New Row";
+        });
+
+        // 9. Lazy Loading Example
+        // Lazy load happens automatically since the image has the 'loading="lazy"' attribute
+    </script>
+</body>
+</html>
+
 
 
 
