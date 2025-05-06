@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation Example</title>
+    <style>
+        .newClass {
+            color: red;
+            font-size: 20px;
+        }
+        .dynamic-content {
+            margin-top: 20px;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <h1>DOM Manipulation Example</h1>
+    
+    <!-- 1. Changing HTML Content -->
+    <div id="content">
+        <p>This is a paragraph.</p>
+    </div>
+    
+    <!-- 2. Changing Element Attributes -->
+    <img id="myImage" src="https://via.placeholder.com/150" alt="Placeholder" />
+    <button id="changeImageBtn">Change Image</button>
+
+   <!-- 3. Adding and Removing CSS Classes -->
+    <div id="myElement" class="dynamic-content">
+        <p>Click below to add a new class to this element.</p>
+        <button id="addClassBtn">Add Class</button>
+        <button id="removeClassBtn">Remove Class</button>
+    </div>
+
+    <!-- 4. Adding/Removing Elements -->
+    <button id="createNewDivBtn">Create New Div</button>
+
+    <!-- 5. Event Handling -->
+    <button id="alertBtn">Click Me for an Alert</button>
+
+    <!-- 6. Traversing the DOM -->
+    <div id="parentDiv">
+        <p>Parent Div</p>
+        <div id="childDiv">Child Div</div>
+    </div>
+    
+    <!-- 7. Form Manipulation -->
+    <form id="myForm">
+        <input type="text" id="nameInput" placeholder="Enter your name">
+        <button type="button" id="formSubmitBtn">Submit</button>
+    </form>
+
+   <!-- 8. Table Manipulation -->
+    <table id="myTable">
+        <thead>
+            <tr><th>Header</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Row 1</td></tr>
+        </tbody>
+    </table>
+    <button id="addTableRowBtn">Add Table Row</button>
+
+    <!-- 9. Lazy Loading Example -->
+    <img id="lazyImg" src="https://via.placeholder.com/150" loading="lazy" alt="Lazy Load Image" />
+    
+    <script>
+        // 1. Changing HTML Content
+        document.getElementById('content').innerHTML = "<p>Content has been updated!</p>";
+
+
+
+

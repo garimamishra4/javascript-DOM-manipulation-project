@@ -1,1 +1,0 @@
-# javascript-DOM-manipulation-project
